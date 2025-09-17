@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Acme Corporation",
+        "company_number": "ACME0001",
+        "jurisdiction_code": "us_de",
+        "status": "Active",
+        "incorporation_date": "1995-04-12"
+    },
+    {
+        "name": "Globex Corporation",
+        "company_number": "GLOBEX42",
+        "jurisdiction_code": "us_nv",
+        "status": "Active",
+        "incorporation_date": "2001-09-01"
+    },
+    {
+        "name": "Stark Industries",
+        "company_number": "STARK007",
+        "jurisdiction_code": "us_de",
+        "status": "Active",
+        "incorporation_date": "1974-08-19"
+    },
+    {
+        "name": "Wayne Enterprises",
+        "company_number": "WAYNEBAT",
+        "jurisdiction_code": "us_de",
+        "status": "Active",
+        "incorporation_date": "1985-10-31"
+    },
+    {
+        "name": "Wonka Industries",
+        "company_number": "WONKA123",
+        "jurisdiction_code": "gb",
+        "status": "Dissolved",
+        "incorporation_date": "1964-02-01"
+    },
+    {
+        "name": "Soylent Corporation",
+        "company_number": "SOYLENT02",
+        "jurisdiction_code": "us_ca",
+        "status": "Active",
+        "incorporation_date": "1973-03-15"
+    },
+    {
+        "name": "Tyrell Corporation",
+        "company_number": "TYRELL09",
+        "jurisdiction_code": "us_ca",
+        "status": "Inactive",
+        "incorporation_date": "2019-11-20"
+    },
+    {
+        "name": "Hooli",
+        "company_number": "HOOLI001",
+        "jurisdiction_code": "us_ca",
+        "status": "Active",
+        "incorporation_date": "2010-06-10"
+    },
+    {
+        "name": "Initech",
+        "company_number": "INITEC01",
+        "jurisdiction_code": "us_tx",
+        "status": "Active",
+        "incorporation_date": "1991-01-15"
+    },
+    {
+        "name": "Pied Piper",
+        "company_number": "PIEDP001",
+        "jurisdiction_code": "us_ca",
+        "status": "Active",
+        "incorporation_date": "2014-03-01"
+    }
+]
