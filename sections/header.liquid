@@ -7,7 +7,9 @@
       {% endfor %}
     </nav>
     <div class="header-actions">
-      <a href="{{ routes.cart_url }}" class="cart-link">Cart ({{ cart.item_count }})</a>
+      <button class="cart-link" type="button" data-cart-drawer-trigger>
+        Cart ({{ cart.item_count }})
+      </button>
     </div>
   </div>
 </header>

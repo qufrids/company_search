@@ -1,0 +1,22 @@
+<section class="announcement-bar">
+  <p>{{ section.settings.message }}</p>
+</section>
+
+{% schema %}
+{
+  "name": "Announcement bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "message",
+      "label": "Message",
+      "default": "Complimentary express shipping on orders over $250"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Announcement bar"
+    }
+  ]
+}
+{% endschema %}
