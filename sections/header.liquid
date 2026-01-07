@@ -1,0 +1,14 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="{{ routes.root_url }}">{{ shop.name }}</a>
+    <nav class="header-nav">
+      <a href="/collections/new">New</a>
+      <a href="/collections/women">Women</a>
+      <a href="/collections/men">Men</a>
+      <a href="/collections/accessories">Accessories</a>
+    </nav>
+    <div class="header-actions">
+      <a href="{{ routes.cart_url }}" class="cart-link">Cart ({{ cart.item_count }})</a>
+    </div>
+  </div>
+</header>
