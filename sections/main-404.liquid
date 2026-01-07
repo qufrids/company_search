@@ -1,0 +1,18 @@
+<section class="not-found">
+  <div class="not-found-inner">
+    <p class="eyebrow">404</p>
+    <h1>Page not found</h1>
+    <p class="hero-subtitle">The page you were looking for doesn't exist. Try searching or return home.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="{{ routes.root_url }}">Back to home</a>
+      <a class="button ghost" href="{{ routes.search_url }}">Search the store</a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main 404",
+  "settings": []
+}
+{% endschema %}

@@ -1,0 +1,35 @@
+<section class="collection">
+  <div class="collection-inner">
+    <header class="collection-header">
+      <h1>{{ collection.title }}</h1>
+      {% if collection.description != blank %}
+        <div class="rte">{{ collection.description }}</div>
+      {% endif %}
+    </header>
+
+    {% if collection.products_count > 0 %}
+      <div class="product-grid">
+        {% for product in collection.products %}
+          <article class="product-card">
+            <a href="{{ product.url }}">
+              {% if product.featured_image %}
+                <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.featured_image.alt | escape }}">
+              {% endif %}
+              <h2>{{ product.title }}</h2>
+              <p class="price">{{ product.price | money }}</p>
+            </a>
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="empty-state">No products found in this collection.</p>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main collection",
+  "settings": []
+}
+{% endschema %}
