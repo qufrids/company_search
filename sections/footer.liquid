@@ -1,23 +1,61 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div>
-      <h4>Maison</h4>
-      <a href="/pages/about">About</a>
-      <a href="/pages/sustainability">Sustainability</a>
-      <a href="/pages/careers">Careers</a>
+      <h4>{{ section.settings.column_one_heading }}</h4>
+      {{ section.settings.column_one_links }}
     </div>
     <div>
-      <h4>Client Services</h4>
-      <a href="/pages/contact">Contact</a>
-      <a href="/pages/shipping">Shipping</a>
-      <a href="/pages/returns">Returns</a>
+      <h4>{{ section.settings.column_two_heading }}</h4>
+      {{ section.settings.column_two_links }}
     </div>
     <div>
-      <h4>Follow</h4>
-      <a href="https://instagram.com">Instagram</a>
-      <a href="https://facebook.com">Facebook</a>
-      <a href="https://youtube.com">YouTube</a>
+      <h4>{{ section.settings.column_three_heading }}</h4>
+      {{ section.settings.column_three_links }}
     </div>
   </div>
   <p class="footer-note">© {{ 'now' | date: '%Y' }} {{ shop.name }}. All rights reserved.</p>
 </footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "column_one_heading",
+      "label": "Column one heading",
+      "default": "Maison"
+    },
+    {
+      "type": "richtext",
+      "id": "column_one_links",
+      "label": "Column one links",
+      "default": "<p><a href=\"/pages/about\">About</a></p><p><a href=\"/pages/sustainability\">Sustainability</a></p><p><a href=\"/pages/careers\">Careers</a></p>"
+    },
+    {
+      "type": "text",
+      "id": "column_two_heading",
+      "label": "Column two heading",
+      "default": "Client Services"
+    },
+    {
+      "type": "richtext",
+      "id": "column_two_links",
+      "label": "Column two links",
+      "default": "<p><a href=\"/pages/contact\">Contact</a></p><p><a href=\"/pages/shipping\">Shipping</a></p><p><a href=\"/pages/returns\">Returns</a></p>"
+    },
+    {
+      "type": "text",
+      "id": "column_three_heading",
+      "label": "Column three heading",
+      "default": "Follow"
+    },
+    {
+      "type": "richtext",
+      "id": "column_three_links",
+      "label": "Column three links",
+      "default": "<p><a href=\"https://instagram.com\">Instagram</a></p><p><a href=\"https://facebook.com\">Facebook</a></p><p><a href=\"https://youtube.com\">YouTube</a></p>"
+    }
+  ]
+}
+{% endschema %}

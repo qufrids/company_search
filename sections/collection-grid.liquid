@@ -1,0 +1,92 @@
+<section class="collection-grid">
+  {% for block in section.blocks %}
+    <article class="collection-card">
+      <span class="tag">{{ block.settings.tag }}</span>
+      <h2>{{ block.settings.heading }}</h2>
+      <p>{{ block.settings.body }}</p>
+      <a href="{{ block.settings.link_url }}">{{ block.settings.link_label }}</a>
+    </article>
+  {% endfor %}
+</section>
+
+{% schema %}
+{
+  "name": "Collection grid",
+  "blocks": [
+    {
+      "type": "collection_card",
+      "name": "Collection card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag",
+          "default": "Signature"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Leather & Logo"
+        },
+        {
+          "type": "textarea",
+          "id": "body",
+          "label": "Body",
+          "default": "Signature bags, belts, and travel pieces with refined hardware."
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "Link label",
+          "default": "Explore Accessories"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link",
+          "default": "/collections/accessories"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    {
+      "name": "Collection grid",
+      "blocks": [
+        {
+          "type": "collection_card",
+          "settings": {
+            "tag": "Signature",
+            "heading": "Leather & Logo",
+            "body": "Signature bags, belts, and travel pieces with refined hardware.",
+            "link_label": "Explore Accessories",
+            "link_url": "/collections/accessories"
+          }
+        },
+        {
+          "type": "collection_card",
+          "settings": {
+            "tag": "Runway",
+            "heading": "Ready-to-Wear",
+            "body": "Tailoring and statement separates inspired by Florence ateliers.",
+            "link_label": "Shop Women",
+            "link_url": "/collections/women"
+          }
+        },
+        {
+          "type": "collection_card",
+          "settings": {
+            "tag": "Heritage",
+            "heading": "Footwear",
+            "body": "Loafers, sneakers, and heels with signature web detailing.",
+            "link_label": "Shop Footwear",
+            "link_url": "/collections/shoes"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

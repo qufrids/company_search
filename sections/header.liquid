@@ -2,13 +2,26 @@
   <div class="header-inner">
     <a class="brand" href="{{ routes.root_url }}">{{ shop.name }}</a>
     <nav class="header-nav">
-      <a href="/collections/new">New</a>
-      <a href="/collections/women">Women</a>
-      <a href="/collections/men">Men</a>
-      <a href="/collections/accessories">Accessories</a>
+      {% for link in linklists[section.settings.menu].links %}
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      {% endfor %}
     </nav>
     <div class="header-actions">
       <a href="{{ routes.cart_url }}" class="cart-link">Cart ({{ cart.item_count }})</a>
     </div>
   </div>
 </header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu",
+      "default": "main-menu"
+    }
+  ]
+}
+{% endschema %}
