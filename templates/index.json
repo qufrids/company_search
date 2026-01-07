@@ -1,0 +1,30 @@
+{
+  "sections": {
+    "announcement": {
+      "type": "announcement-bar"
+    },
+    "hero": {
+      "type": "hero"
+    },
+    "collection_list": {
+      "type": "collection-list"
+    },
+    "featured_collection": {
+      "type": "featured-collection"
+    },
+    "collection_grid": {
+      "type": "collection-grid"
+    },
+    "feature_banner": {
+      "type": "feature-banner"
+    }
+  },
+  "order": [
+    "announcement",
+    "hero",
+    "collection_list",
+    "featured_collection",
+    "collection_grid",
+    "feature_banner"
+  ]
+}

@@ -1,0 +1,44 @@
+<section class="feature-banner">
+  <div>
+    <h2>{{ section.settings.heading }}</h2>
+    <p>{{ section.settings.body }}</p>
+  </div>
+  <a class="button primary" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+</section>
+
+{% schema %}
+{
+  "name": "Feature banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Private appointments"
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Body",
+      "default": "Book a personalized styling session with our concierge team."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Book Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link",
+      "default": "/pages/contact"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature banner"
+    }
+  ]
+}
+{% endschema %}

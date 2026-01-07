@@ -1,0 +1,40 @@
+<section class="search">
+  <div class="search-inner">
+    <header class="search-header">
+      <h1>Search</h1>
+      <form action="{{ routes.search_url }}" method="get" role="search" class="search-form">
+        <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="Search products" class="search-input">
+        <button type="submit" class="button ghost">Search</button>
+      </form>
+    </header>
+
+    {% if search.performed %}
+      {% if search.results_count > 0 %}
+        <div class="product-grid">
+          {% for item in search.results %}
+            {% if item.object_type == 'product' %}
+              <article class="product-card">
+                <a href="{{ item.url }}">
+                  {% if item.featured_image %}
+                    <img src="{{ item.featured_image | image_url: width: 600 }}" alt="{{ item.featured_image.alt | escape }}">
+                  {% endif %}
+                  <h2>{{ item.title }}</h2>
+                  <p class="price">{{ item.price | money }}</p>
+                </a>
+              </article>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="empty-state">No results found for "{{ search.terms }}".</p>
+      {% endif %}
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main search",
+  "settings": []
+}
+{% endschema %}

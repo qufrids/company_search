@@ -1,0 +1,27 @@
+{
+  "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "menu": "main-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {}
+      }
+    },
+    "content_for_index": [
+      "hero",
+      "collection_grid",
+      "feature_banner"
+    ],
+    "theme": {
+      "settings": {
+        "brand_name": "Maison"
+      }
+    }
+  },
+  "presets": {}
+}

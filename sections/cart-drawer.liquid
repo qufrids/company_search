@@ -1,0 +1,26 @@
+<section class="cart-drawer" data-cart-drawer hidden>
+  <div class="cart-drawer__overlay" data-cart-drawer-overlay></div>
+  <div class="cart-drawer__panel">
+    <header class="cart-drawer__header">
+      <h2>Cart</h2>
+      <button type="button" class="cart-drawer__close" data-cart-drawer-close aria-label="Close cart">×</button>
+    </header>
+    <div class="cart-drawer__body" data-cart-drawer-body>
+      <p class="empty-state">Your cart is empty.</p>
+    </div>
+    <footer class="cart-drawer__footer" data-cart-drawer-footer hidden>
+      <div class="cart-drawer__subtotal">
+        <span>Subtotal</span>
+        <strong data-cart-drawer-total></strong>
+      </div>
+      <a class="button primary" href="{{ routes.cart_url }}">Checkout</a>
+    </footer>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Cart drawer",
+  "settings": []
+}
+{% endschema %}
